@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<title>Lab5</title>
+	<script src="jstokke_lab5_act1.js" type="text/javascript"></script>
+</head>
+<body onload='fillTables()'>
+<table id="weatherList" border="1" style="border-collapse: collapse">
+	<tr>
+		<th>City Name</th>
+		<th>Timestamp (yyyy:mm:dd:hh:mm:ss)</th>
+		<th>Temperature in &#8451</th>
+		<th>Humidity in %</th>
+		<th>Wind Speed in Miles per Hour</th>
+		<th>Cloudiness in %</th>
+	</tr>
+	<tr>
+		<td id="cityName1"></td>
+		<td id="date1"></td>
+		<td id="temp1"></td>
+		<td id="humidity1"></td>
+		<td id="wind1"></td>
+		<td id="clouds1"></td>
+	</tr>
+	<tr>
+		<td id="cityName2"></td>
+		<td id="date2"></td>
+		<td id="temp2"></td>
+		<td id="humidity2"></td>
+		<td id="wind2"></td>
+		<td id="clouds2"></td>
+	</tr>
+</table>
+<p>Please select a third city:
+<select id="cityChoice" onchange="getCityWeather(cityChoice.value, '3', 'addition')">
+	<option>Select One</option>
+	<option value="dublin, ie">Dublin, IE</option>
+	<option value="mumbai, in">Mumbai, IN</option>
+	<option value="oslo, no">Oslo, NO</option>
+	<option value="san Diego, US">San Diego, US</option>
+	<option value="tillamook, US">Tillamook, US</option>
+</select><br/>
+<button onclick="checkUpdate(cityChoice.value)">Refresh</button>
+</p>
+<p><span id="temperature"></span><br/>
+<span id="humidity"></span><br/>
+<span id="best"></span><br/>
+<span id="worst"></span></p>
+</body>
+		
